@@ -1,0 +1,20 @@
+
+<div class="container">
+    <h2>Subjects</h2>
+    <table class="table customstyle">
+      <thead>
+        <tr>
+          <th>Subject Code</th>
+          <th>Subject Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of customerarray">
+            <td >{{c.subject_code}}</td>
+            <td >{{c.subject_desc}}</td>
+            <button [routerLink]="['student-detail']" [queryParams]="{id:c.subject_code}" class="btn btn-info">View Student Ids</button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
